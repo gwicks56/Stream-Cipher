@@ -1,0 +1,9 @@
+Please Note:
+
+This program worked perfectly on my home PC with the examples provided.
+I cannot test on the server, i can get an error message:
+
+SERVER_DHEX_ERROR: Client provided shared key is different to Server shared key
+
+I can't work out why this is, my DHEX module worked perfectly in PART A, and I have just
+copied and pasted it into this implementation.
