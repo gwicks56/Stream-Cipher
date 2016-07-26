@@ -16,8 +16,6 @@
 # Key: 0x0f1571c947d9e859
 
 
-# TODO, You will need to instantiate quite a number of DES variables, such as the 
-# permutation blocks and etc etc...
 class DESCiphers:
     # CLASS VARIABLES GO HERE
     
