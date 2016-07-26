@@ -38,7 +38,7 @@ class StreamCipher:
         OUTPUT:
             returns an instantiated StreamCipher object
         """
-        # ======== IMPLEMENTATION GOES HERE =========
+      
         self.dh_key = dh_key #dh_key # 2048bit DH Key from Part A1
         
         self.dh_p = dh_p # DH Key Parameter, Prime Modulus
@@ -47,8 +47,7 @@ class StreamCipher:
         self.b = deriveSupplementaryKey(dh_key, p2) # Supplementary Key B for Stream Cipher
         self.r_i = parityWordChecksum(dh_key) # Shift Register
         
-        # ======== END IMPLEMENTATION ===============
-
+   
     # =============== ADD CLASS ADDITIONAL METHODS ==================
 
 
@@ -78,12 +77,12 @@ class StreamCipher:
         OUTPUT:
             nothing
         """
-        # ======== IMPLEMENTATION GOES HERE =========
+    
         
         r_new = (self.a*self.r_i +self.b) % self.dh_p
         self.r_i = r_new
 
-        # ======== END IMPLEMENTATION ===============
+    
         return None
 
     # TODO
@@ -97,7 +96,7 @@ class StreamCipher:
         OUTPUT:
             new_msg, if PT, then output is CT and vice-versa.
         """
-        # ======== IMPLEMENTATION GOES HERE =========
+    
 
         # Takes a binary input xor's it with shift register and then outputs a binary
         
@@ -105,7 +104,7 @@ class StreamCipher:
         new_msg = int(msg,2) ^ int(msb_num,2)           # Perform XOR
         self.updateShiftRegister()                           # update the Shift Register
 
-        # ======== END IMPLEMENTATION ===============
+      
         return new_msg
 
     # TODO
@@ -117,10 +116,10 @@ class StreamCipher:
         OUTPUT:
             nothing
         """
-        # ======== IMPLEMENTATION GOES HERE =========
+       
         # reset shift Register to original
         self.r_i = parityWordChecksum(self.dh_key)
-        # ======== END IMPLEMENTATION ===============
+       
         return None
 
     # =============== ADD CLASS ADDITIONAL METHODS ==================
